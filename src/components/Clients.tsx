@@ -2,13 +2,14 @@ import React from 'react';
 
 const Clients: React.FC = () => {
   const logos = [
-    { src: "/public/wecam.png", alt: "WeCam" },
-    { src: "/public/Sbc.png", alt: "SBC" },
-    { src: "/public/logo-19.png", alt: "Logo 19" },
-    { src: "/public/taxes.png", alt: "Taxes" },
-    { src: "/public/Tarfeeh.png", alt: "Tarfeeh" },
-    { src: "/public/taxes.png", alt: "WeCam" },
-    { src: "/public/Employeebrand.png", alt: "Employee Brand" }
+    { src: "/wecam.png", alt: "WeCam" },
+    { src: "/Sbc.png", alt: "SBC" },
+    { src: "/logo-19.png", alt: "Logo 19" },
+    { src: "/taxes.png", alt: "Taxes" },
+    { src: "/Tarfeeh.png", alt: "Tarfeeh" },
+    { src: "/taxes.png", alt: "WeCam" },
+    { src: "/Employeebrand.png", alt: "Employee Brand" },
+    { src: "/سول-.png.webp", alt: "Soll" }
   ];
 
   // Duplicate the logos array to create seamless scrolling
