@@ -1,0 +1,477 @@
+.landing-page {
+  /* Add basic styles for the overall landing page container */
+  min-height: 100vh;
+  background-color: #261642; /* Dark purple from the image */
+  color: white;
+  font-family: 'Arial', sans-serif; /* Placeholder font */
+  width: 100%; /* Ensure it takes full width of the viewport */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+}
+
+.navbar {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: transparent; /* Navbar background is transparent in the image */
+  position: absolute; /* Positioned absolutely on top of the hero section */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* logoimg */
+.navbar-logo img { 
+  height: 5rem;
+  margin-left: -10rem; /* Current margin-left */
+  opacity: 0.7;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #c9c9c9; /* Light gray color from the image */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  text-align: center;
+  padding-top: 8px;
+  background-color: #1a0d2e;
+  background-image: url('/imghero.webp');
+  background-size:cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  background-color: #E2D1F9; /* Lighter purple from the image */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 6px 6px 0px #F0F0F0; /* Offset shadow for the lifted effect */
+}
+
+.contact-button:hover {
+  background-color: #d1c8e0; /* Slightly darker on hover */
+  transform: translate(-3px, -3px); /* Move button slightly up-left on hover */
+  box-shadow: 9px 9px 0px #F0F0F0; /* Increase shadow offset on hover */
+}
+
+.about-section {
+  background-color: #1a0d2e;
+  padding: 7rem 0%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Ensure the section content is above the overlay */
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place the overlay behind the content but above the background */
+}
+
+.about-section p {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2; /* Higher z-index than the overlay */
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #E2D1F9;
+}
+
+.projects-section {
+  background-color: #1a0d2e; /* Dark purple background */
+  padding: 5rem 5%;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  border: 2px solid #5d7eef; /* Blue border as shown in the image */
+  padding: 20px; /* Padding inside the border */
+  border-radius: 10px; /* Slightly rounded corners for the grid */
+}
+
+.project-card {
+  background-color: #332050; /* Slightly lighter purple for cards */
+  border-radius: 15px;
+  min-height: 200px; /* Placeholder height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonials-section {
+  background-color: #1a0d2e; /* Same as hero/about section */
+  padding: 5rem 0%; /* Adjust padding */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.testimonials-carousel-container {
+  position: relative;
+  width: 100%; /* Make it take full width of its parent */
+  max-width: 900px; /* Limit overall width */
+  margin: 0 auto;
+  border-radius: 15px; /* Apply rounded corners */
+  overflow: hidden; /* Ensures image and overlay stay within bounds */
+}
+
+.testimonial-item {
+  position: relative;
+  width: 100%; /* Ensure it takes full width of the visible container */
+  height: 400px; /* Fixed height for the testimonial card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  flex-shrink: 0; /* Important for single item carousel */
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5); /* Darken image to make overlay text more readable */
+}
+
+.testimonial-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.testimonial-overlay h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.testimonial-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #c9c9c9;
+  max-width: 700px;
+}
+
+.services-section {
+  background-color: #261642; /* Darker purple background */
+
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.services-carousel {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Make carousel take full width */
+  max-width: 100%; /* Ensure it doesn't exceed 100% */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Hides the scrollbar on the carousel container itself */
+  padding: 0 60px; /* Increased padding to give more space for arrows outside */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.services-items {
+  display: flex;
+  flex-grow: 1; /* Allows it to take available space */
+  /* All scrolling and gap properties moved to .carousel-body */
+}
+
+.services-items::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+.service-item {
+  flex-shrink: 0; /* Prevents items from shrinking */
+  width: 180px; /* Fixed width for the item */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  background-color: transparent; /* No background on the item itself */
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  scroll-snap-align: center;
+  white-space: normal; /* Allow text inside to wrap */
+}
+
+.service-image-wrapper {
+  width: 150px; /* Diameter of the circle */
+  height: 150px; /* Diameter of the circle */
+  border-radius: 50%;
+  overflow: hidden; /* Clips the image into a circle */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #332050; /* Placeholder background if image is slow to load */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* Slightly darken image */
+}
+
+.service-image-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h3 {
+  font-size: 1.1rem;
+  margin-top: 1rem; /* Space between image and title */
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: #c9c9c9;
+  line-height: 1.5;
+}
+
+.clients-section {
+  background-color: #1a0d2e; /* Dark purple background */
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+.clients-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.client-logo {
+  height: 80px; /* Adjust logo size as needed */
+  max-width: 150px; /* Ensure logos don't get too big */
+  object-fit: contain;
+  filter: grayscale(100%) brightness(200%); /* Adjust to match the light appearance in the image */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.client-logo:hover {
+  opacity: 1;
+}
+
+.footer-section {
+  background-color: #1a0d2e; /* Dark purple background */
+  padding: 5rem 5%;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-contact,
+.footer-social,
+.footer-logo-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #c9c9c9;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #332050; /* Subtle border */
+  border-radius: 5px;
+  background-color: #261642; /* Darker background for input fields */
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #a084dc;
+}
+
+.send-button {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  background-color: #a084dc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+}
+
+.send-button:hover {
+  background-color: #8c71cc;
+  transform: translateY(-2px);
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+  margin-left: 2rem; /* Push to the left */
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Align social links to the left */
+}
+
+.footer-social li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #c9c9c9;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffffff;
+}
+
+.footer-social p {
+  margin-top: 1.5rem;
+  color: #c9c9c9;
+  text-align: left; /* Align email/phone to the left */
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align logo section to the right */
+  justify-content: center;
+  text-align: right; /* Align text within logo section to the right */
+}
+
+.footer-logo {
+  height: 50px; /* Reduced height to make the logo smaller */
+  margin-bottom: 1rem;
+}
+
+.agency-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #332050;
+  padding-top: 2rem;
+  text-align: center;
+  color: #c9c9c9;
+  font-size: 0.9rem;
+} 
