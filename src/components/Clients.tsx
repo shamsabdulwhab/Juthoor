@@ -1,14 +1,32 @@
 import React from 'react';
 
 const Clients: React.FC = () => {
+  const logos = [
+    { src: "/public/wecam.png", alt: "WeCam" },
+    { src: "/public/Sbc.png", alt: "SBC" },
+    { src: "/public/logo-19.png", alt: "Logo 19" },
+    { src: "/public/taxes.png", alt: "Taxes" },
+    { src: "/public/Tarfeeh.png", alt: "Tarfeeh" },
+    { src: "/public/taxes.png", alt: "WeCam" },
+    { src: "/public/Employeebrand.png", alt: "Employee Brand" }
+  ];
+
+  // Duplicate the logos array to create seamless scrolling
+  const duplicatedLogos = [...logos, ...logos];
+
   return (
     <section className="clients-section">
-      <div className="clients-grid">
-        {/* Replace with actual client logos */}
-        <img src="/path/to/spotify-logo.svg" alt="Spotify" className="client-logo" />
-        <img src="/path/to/coca-cola-logo.svg" alt="Coca Cola" className="client-logo" />
-        <img src="/path/to/lego-logo.svg" alt="Lego" className="client-logo" />
-        <img src="/path/to/samsung-logo.svg" alt="Samsung" className="client-logo" />
+      <div className="clients-wrapper">
+        <div className="clients-grid">
+          {duplicatedLogos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="client-logo"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

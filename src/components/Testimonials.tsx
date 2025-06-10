@@ -7,6 +7,7 @@ interface TestimonialItemData {
   image: string;
   title: string;
   description: string;
+  company: string;
 }
 
 const Testimonials: React.FC = () => {
@@ -15,7 +16,8 @@ const Testimonials: React.FC = () => {
       <img src={testimonial.image} alt={testimonial.title} className="testimonial-image" />
       <div className="testimonial-overlay">
         <h3>{testimonial.title}</h3>
-        <p>{testimonial.description}</p>
+        <p className="testimonial-company">{testimonial.company}</p>
+        <p className="testimonial-description">{testimonial.description}</p>
       </div>
     </div>
   );
