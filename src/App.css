@@ -514,4 +514,39 @@
   text-align: center;
   color: #c9c9c9;
   font-size: 0.9rem;
+}
+
+.language-dropdown select {
+  background-color: #261642; /* Explicitly set to a dark color from your theme */
+  color: white;
+  border: none;
+  padding: 0rem 0.9rem 0rem 0rem;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.language-dropdown select option {
+  background-color: #261642; /* Ensure options also have a dark background */
+  color: white;
+}
+
+.language-dropdown select:focus {
+  outline: none;
+}
+
+/* Optional: Add a custom arrow if desired */
+.language-dropdown {
+  position: relative;
+}
+
+.language-dropdown::after {
+  content: '\25BC'; /* Unicode for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensures clicks go through to the select element */
 } 
