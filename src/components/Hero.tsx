@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
     <section className="hero-section">
       <div className="hero-content">
         <h1>{translations[currentLanguage].title}</h1>
-        <a href="https://wa.me/31681742449" target="_blank" rel="noopener noreferrer" className="contact-button">
+        <a href="https://wa.me/966500410134" target="_blank" rel="noopener noreferrer" className="contact-button">
           {translations[currentLanguage].contact}
         </a>
       </div>

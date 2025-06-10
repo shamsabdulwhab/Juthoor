@@ -687,7 +687,7 @@
 
   .navbar-header {
     width: 100%;
-    padding:  0rem 5rem 0rem 1.2rem ; /* Ensure it takes full width to push logo left and burger right */
+    padding:  0rem 3rem 0rem 2rem ; /* Ensure it takes full width to push logo left and burger right */
   }
 
   .navbar-logo img {
