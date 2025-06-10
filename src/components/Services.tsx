@@ -6,7 +6,6 @@ interface ServiceItemData {
   id: number;
   image: string;
   title: string;
-  description: string;
 }
 
 const Services: React.FC = () => {
@@ -16,7 +15,6 @@ const Services: React.FC = () => {
         <img src={service.image} alt={service.title} />
       </div>
       <h3>{service.title}</h3>
-      <p>{service.description}</p>
     </div>
   );
 
