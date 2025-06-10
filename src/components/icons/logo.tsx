@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from '../../assets/logo_.png';
 
 interface LogoProps {
   height?: string;
@@ -6,7 +7,11 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ height }) => {
   return (
-    <img src="/src/assets/logo_.png" alt="Juthoor_logo" style={height ? { height } : {}} />
+    <img 
+      src={logoImage} 
+      alt="Juthoor Logo" 
+      style={height ? { height } : {}} 
+    />
   );
 };
 
