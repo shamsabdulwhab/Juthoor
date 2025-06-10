@@ -9,7 +9,7 @@ const Clients: React.FC = () => {
     { src: "/Tarfeeh.png", alt: "Tarfeeh" },
     { src: "/taxes.png", alt: "WeCam" },
     { src: "/Employeebrand.png", alt: "Employee Brand" },
-    { src: "/سول-.png.webp", alt: "Soll" }
+    // { src: "/سول-.png.webp", alt: "Soll" }
   ];
 
   // Duplicate the logos array to create seamless scrolling
