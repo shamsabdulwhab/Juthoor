@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../components/icons/logo';
+import Logo from '../components/icons/logo.tsx';
 
 const Navbar: React.FC = () => {
   return (
