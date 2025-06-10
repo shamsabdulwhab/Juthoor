@@ -1,7 +1,14 @@
 import React, { useRef } from 'react';
 import './carousel.css';
-import LeftArrow from './icons/leftarrow';
-import RightArrow from './icons/rightarrow';
+import LeftArrow from '../icons/LeftArrow.tsx';
+import RightArrow from '../icons/RightArrow.tsx';
+
+export type Service = {
+  id: number;
+  image: string;
+  title: string;
+};
+
 interface CarouselProps<T> {
   items: T[];
   renderItem: (item: T, index: number) => React.ReactNode;
