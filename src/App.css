@@ -11,7 +11,7 @@
 
 .navbar {
   display: flex;
-  justify-content: flex-end; /* Align content to the right for larger screens */
+  justify-content: space-around;
   align-items: center;
   margin-top: 1.5rem;
   background-color: transparent;
@@ -19,65 +19,106 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 0 7% 0% 7%; /* Increased right padding to move it further right */
-}
-
-.navbar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; /* Take full width to push items to ends */
 }
 
 /* logoimg */
-.navbar-logo img {
+.navbar-logo img { 
   height: 5rem;
-  margin-left: 0; /* Remove negative margin for general case */
+
   opacity: 0.7;
+}
+
+/* RTL Support */
+[dir="rtl"] .navbar {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .language-dropdown::after {
+  left: 10px;
+  right: auto;
 }
 
 .nav-links {
   display: flex;
-  width: 100%;
   list-style: none;
-  gap: 1.2rem;
-  margin-left: 8rem; /* Reset margin */
-  padding: 0; /* Reset padding */
+  gap: 2rem;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #c9c9c9;
+  color: #c9c9c9; /* Light gray color from the image */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: #ffffff; /* White on hover */
 }
 
-/* Hamburger Icon styles (hidden by default on desktop) */
-.hamburger-icon {
-  display: none; /* Hide on desktop */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1001; /* Ensure it's above other content */
-}
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #261642;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .navbar-logo img{
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    z-index: 1001;
+  }
 
-.hamburger-icon .bar {
-  width: 100%;
-  height: 3px;
-  background-color: white;
-  border-radius: 10px;
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+  }
+
+  .burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  .burger-menu.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger-menu.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* RTL Support for Mobile */
+  [dir="rtl"] .burger-menu {
+    right: auto;
+    right: 40px;
+  }
 }
 
 .hero-section {
@@ -115,6 +156,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   box-shadow: 6px 6px 0px #F0F0F0; /* Offset shadow for the lifted effect */
+  color: white; /* Added white text color */
 }
 
 .contact-button:hover {
@@ -531,12 +573,6 @@
   justify-content: center;
   text-align: right; /* Align text within logo section to the right */
 }
-@media (max-width: 768px) {
-  .footer-logo-section {
-    align-items: center;
-    text-align: center;
-  }
-}
 
 .footer-logo {
   height: 50px; /* Reduced height to make the logo smaller */
@@ -590,191 +626,4 @@
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none; /* Ensures clicks go through to the select element */
-}
-
-@media (max-width: 768px) {
-  .testimonials-section {
-    padding: 3rem 2%; /* Adjust padding for tablets */
-  }
-
-  .testimonials-carousel-container {
-    max-width: 100%; /* Allow full width on smaller screens */
-  }
-
-  .testimonial-item {
-    height: 350px; /* Slightly reduce height */
-  }
-
-  .testimonial-overlay {
-    padding: 1.5rem; /* Reduce padding for overlay */
-  }
-
-  .testimonial-overlay h3 {
-    font-size: 1.6rem;
-  }
-
-  .testimonial-company {
-    font-size: 1rem;
-  }
-
-  .testimonial-description {
-    font-size: 1rem;
-    max-width: 85%; /* Adjust max-width for better fit */
-  }
-
-  .clients-section {
-    padding: 2rem 2%; /* Adjust padding for clients section on tablets */
-  }
-
-  .client-logo {
-    height: 60px; /* Reduce logo size */
-    max-width: 100px; /* Reduce max-width for logos */
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonials-section {
-    padding: 2rem 1%; /* Further adjust padding for phones */
-  }
-
-  .testimonial-item {
-    height: 300px; /* Further reduce height for phones */
-  }
-
-  .testimonial-overlay {
-    padding: 1rem; /* Further reduce padding for overlay */
-  }
-
-  .testimonial-overlay h3 {
-    font-size: 1.4rem;
-  }
-
-  .testimonial-company {
-    font-size: 0.9rem;
-  }
-
-  .testimonial-description {
-    font-size: 0.9rem;
-    max-width: 95%; /* Allow description to take more width */
-  }
-
-  .clients-section {
-    padding: 1.5rem 1%; /* Further adjust padding for clients section on phones */
-  }
-
-  .client-logo {
-    height: 50px; /* Further reduce logo size */
-    max-width: 80px; /* Further reduce max-width for logos */
-  }
-
-  .clients-grid {
-    gap: 1rem; /* Reduce gap between logos */
-  }
-
-  .about-section p {
-    font-size: 1rem; /* Smaller font size for phones */
-    line-height: 1.6;
-    padding: 0rem 2rem;
-  }
-
-  .navbar {
-    flex-direction: row; /* Keep as row to align logo and burger */
-    justify-content: space-around; /* Push logo left, burger right */
-    align-items: center;
-    margin-top: 1rem;
-    padding: 0 0%; /* Ensure consistent padding */
-  }
-
-  .navbar-header {
-    width: 100%;
-    padding:  0rem 3rem 0rem 2rem ; /* Ensure it takes full width to push logo left and burger right */
-  }
-
-  .navbar-logo img {
-    margin-left: 0; /* Ensure no negative margin */
-    height: 4rem;
-  }
-
-  .nav-links {
-    display: none; /* Hide nav links by default on mobile */
-    flex-direction: column;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    position: fixed;
-    top: 0;
-    right: 0rem;
-    background-color: #1a0d2e; /* Dark background for mobile menu */
-    padding-top: 60px; /* Space from top to avoid overlapping navbar */
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%); /* Slide out to the right */
-    z-index: 999; /* Below hamburger icon */
-  }
-
-  .nav-links.mobile-menu-open {
-    display: flex; /* Show when menu is open */
-    transform: translateX(0); /* Slide into view */
-  }
-
-  .nav-links li {
-    margin: 0;
-  }
-
-  .nav-links li a {
-    font-size: 1.2rem;
-    padding: 1rem 0;
-  }
-
-  .hamburger-icon {
-    display: flex; /* Show hamburger on mobile */
-  }
-
-  /* Hamburger animation for opening/closing */
-  .hamburger-icon.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger-icon.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-icon.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  .language-dropdown {
-    margin-top: 1.5rem; /* Adjust spacing in mobile menu */
-  }
-
-  .language-dropdown select {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    background-color: #332050; /* Darker background for dropdown in mobile menu */
-  }
-
-  .footer-content {
-    justify-content: center; /* Center content when wrapped on mobile */
-    align-items: center; /* Center content when wrapped on mobile */
-    text-align: center; /* Center text within each item */
-  }
-
-  .footer-contact,
-  .footer-social,
-  .footer-logo-section {
-    min-width: unset; /* Remove min-width to allow better shrinking */
-    width: 100%; /* Take full width on mobile */
-    margin-left: 0; /* Remove specific margins */
-    text-align: center; /* Ensure text alignment for all footer sections */
-  }
-
-  .footer-social ul {
-    text-align: center; /* Center social links */
-  }
-
-  .footer-social p {
-    text-align: center; /* Center social text */
-  }
-}
-
+} 

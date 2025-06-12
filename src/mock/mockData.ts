@@ -6,38 +6,38 @@ export const servicesData = [
   },
   {
     id: 2,
-    image: '/Ellipse 2.png',
-    title: 'Brand Identity & Strategy'
+    image: '/Quote.png',
+    title: 'Media'
   },
   {
     id: 3,
-    image: '/Ellipse 3.png',
-    title: 'Social Media Management'
+    image: '/Quote..png',
+    title: 'Data'
   },
   {
     id: 4,
-    image: '/Ellipse 3.png',
-    title: 'Event Photography'
+    image: '/Quote3.png',
+    title: 'Technology'
   },
   {
     id: 5,
-    image: '/Ellipse 5 (1).png',
-    title: 'Video Production'
+    image: '/Quote6.png',
+    title: 'Platforms'
   },
   {
     id: 6,
-    image: '/Ellipse 1.png',
-    title: 'Web Development'
+    image: '/public/social.png',
+    title: 'Social'
   },
   {
     id: 7,
     image: '/Ellipse 2.png',
-    title: 'Mobile App Development'
+    title: 'Experience'
   },
   {
     id: 8,
-    image: '/Ellipse 3.png',
-    title: 'UI/UX Design'
+    image: '/Ellipse 5 (1) (1).png',
+    title: 'Brand'
   }
 ];
 
