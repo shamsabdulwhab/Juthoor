@@ -49,7 +49,7 @@ export const servicesData = [
 export const testimonialsData = [
   {
     id: 1,
-    image: '/the.jpg',
+    image: '/testimonial1.jpg',
     title: 'Freshly Store',
     description: ' Your work is clear and beautiful. You have excelled and delivered beyond expectations.',
     company: 'Bakgat Store'
