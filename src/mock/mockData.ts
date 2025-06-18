@@ -1,43 +1,48 @@
 export const servicesData = [
   {
     id: 1,
-    image: '/Ellipse 1.png',
+    image: '/1 (1).png',
     title: 'Advertising'
   },
   {
     id: 2,
-    image: '/Quote.png',
+    image: '/1 (4).png',
     title: 'Media'
   },
   {
     id: 3,
-    image: '/Quote..png',
+    image: '/1 (16).png',
     title: 'Data'
   },
   {
     id: 4,
-    image: '/Quote3.png',
+    image: '/1 (6).png',
     title: 'Technology'
   },
   {
     id: 5,
-    image: '/Quote6.png',
+    image: '/1 (11).png',
     title: 'Platforms'
   },
   {
     id: 6,
-    image: '/public/social.png',
+    image: '/1 (8).png',
     title: 'Social'
   },
   {
     id: 7,
-    image: '/Ellipse 2.png',
-    title: 'Experience'
+    image: '/1(16).png',
+    title: 'Content'
   },
   {
     id: 8,
-    image: '/Ellipse 5 (1) (1).png',
+    image: '/1 (9).png',
     title: 'Brand'
+  },
+  {
+    id: 8,
+    image: '/1 (7).png',
+    title: 'Experience'
   }
 ];
 

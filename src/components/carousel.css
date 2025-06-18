@@ -32,8 +32,13 @@
     white-space: nowrap;
     align-items: center;
     padding-bottom: 20px;
-    gap: 2rem;
+    gap: 0;
 }
+
+.carousel-body{
+    gap: 3rem;
+}
+
 .carousel-body::-webkit-scrollbar {
     display: none;
 }

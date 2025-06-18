@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="footer-section">
       <div className="footer-content">
         <div className="footer-contact">
-          <h3>Contact Us</h3>
+          <h3>Send Message</h3>
           <form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
 
         <div className="footer-logo-section">
           {/* Replace with your actual logo image or SVG */}
-           <Logo height="20rem" />
+           <Logo height="12rem" />
           <p className="agency-name">Juthoor Agency</p>
         </div>
       </div>

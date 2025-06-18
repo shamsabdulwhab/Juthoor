@@ -12,9 +12,10 @@ export type Service = {
 interface CarouselProps<T> {
   items: T[];
   renderItem: (item: T, index: number) => React.ReactNode;
+  customClass?: string;
 }
 
-const Carousel = <T,>({ items, renderItem }: CarouselProps<T>) => {
+const Carousel = <T,>({ items, renderItem, customClass }: CarouselProps<T>) => {
     const sliderRef = useRef<HTMLDivElement>(null);
 
     const handleSlide = (direction: 'left' | 'right') => {
@@ -40,7 +41,7 @@ const Carousel = <T,>({ items, renderItem }: CarouselProps<T>) => {
             <div className='carousel-arrow left-arrow' onClick={() => handleSlide('left')}>
                 <LeftArrow />
             </div>
-            <div className='carousel-body' ref={sliderRef}>
+            <div className={`carousel-body${customClass ? ' ' + customClass : ''}`} ref={sliderRef}>
                 {items.map((item, index) => renderItem(item, index))}
             </div>
             <div className='carousel-arrow right-arrow' onClick={() => handleSlide('right')} >

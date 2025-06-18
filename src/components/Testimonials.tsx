@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
     <section className="testimonials-section" id='testimonials'>
       <h2>Testimonials</h2>
       <div className="testimonials-carousel-container">
-        <Carousel items={testimonialsData} renderItem={renderTestimonialItem} />
+        <Carousel items={testimonialsData} renderItem={renderTestimonialItem} customClass="no-gap-carousel" />
       </div>
     </section>
   );

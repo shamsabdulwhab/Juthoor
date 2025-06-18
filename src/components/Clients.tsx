@@ -8,7 +8,13 @@ const Clients: React.FC = () => {
     { src: "/taxes.png", alt: "Taxes" },
     { src: "/Tarfeeh.png", alt: "Tarfeeh" },
     { src: "/taxes.png", alt: "WeCam" },
-    { src: "/Employeebrand.png", alt: "Employee Brand" },
+    { src: "/wecam.png", alt: "WeCam" },
+    { src: "/Sbc.png", alt: "SBC" },
+    { src: "/logo-19.png", alt: "Logo 19" },
+    { src: "/taxes.png", alt: "Taxes" },
+    { src: "/Tarfeeh.png", alt: "Tarfeeh" },
+    { src: "/taxes.png", alt: "WeCam" },
+
     // { src: "/سول-.png.webp", alt: "Soll" }
   ];
 

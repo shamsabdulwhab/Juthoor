@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const translations = {
     en: {
       title: 'Juthoor Agency',
-      contact: 'Contact us',
+      contact: 'Chat with us',
     },
     ar: {
       title: 'وكالة جذور',
